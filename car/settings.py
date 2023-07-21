@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'car.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'cars_db',
+        'USER': 'postgres',
+        'PASSWORD': '1112550',
+        'HOST': 'localhost',
+        
     }
 }
 
@@ -124,6 +128,10 @@ STATIC_ROOT = BASE_DIR / "admin/static"
 STATICFILES_DIRS= [
     BASE_DIR / "static/",
 ]
+
+
+MEDIA_ROOT = BASE_DIR / "admin/media"
+MEDIA_URL = "/media/"
 
  
 
